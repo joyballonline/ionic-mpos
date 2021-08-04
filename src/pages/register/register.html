@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>register</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+      <ion-item>
+        <ion-input placeholder="Full Name" [(ngModel)]="fullname"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Username" [(ngModel)]="username"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Email" [(ngModel)]="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Password" [(ngModel)]="password">Type Password</ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Retype Password" [(ngModel)]="repassword">Type Password</ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-grid class="grid">
+      <ion-row class="row">
+          <button type="submit" ion-button="" round="" class="disable-hover button button-md button-default button-default-md button-round button-round-md" full (click)="register()"><span class="button-inner">Register</span></button>
+      </ion-row>
+      <ion-row class="row">
+        <ion-col class="col">
+          <div style="text-align: center; margin-top: 15px;">Already have an account ?</div>
+        </ion-col>
+        <ion-col class="col">
+          <div><button type="button" color="secondary" ion-button="" round="" class="disable-hover button button-md button-default button-default-md button-round button-round-md button-md-secondary" (click)="goLogin()" full><span class="button-inner">Login</span></button></div>
+        </ion-col>
+      </ion-row> 
+    </ion-grid>
+</ion-content>

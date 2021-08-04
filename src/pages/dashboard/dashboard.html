@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Dashboard</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div>
+          <ion-list>
+            <ion-item>
+              <ion-label>Total</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>{{total}} USD</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <ion-list>
+            <ion-item>
+              <ion-label>Items</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>{{count}} Pcs</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <ion-list>
+            <ion-item>
+              <ion-label>VAT</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>{{vat}} USD</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <button ion-button block color="primary" (click)="manual()">Manual Entry</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button block color="primary" (click)="qrscan()">Sales QR Scan</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <button ion-button block color="secondary" (click)="addproduct()">Add Products</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button block color="secondary" (click)="showproduct()">Show Products</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button ion-button round block color="secondary" (click)="reset()">Reset</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-title>Barcode mPOS - Basic</ion-title>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>

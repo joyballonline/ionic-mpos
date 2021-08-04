@@ -1,0 +1,23 @@
+<ion-content padding center text-center>
+  <ion-list>
+    <ion-item>
+      <ion-input placeholder="Username" [(ngModel)]="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Password" [(ngModel)]="password" type="password"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-grid class="grid">
+    <ion-row class="row">
+        <button ion-button="" round="" class="disable-hover button button-md button-default button-default-md button-round button-round-md" full (click)="login()"><span class="button-inner">Login</span></button>
+    </ion-row>
+    <ion-row class="row">
+      <ion-col class="col">
+        <div style="text-align: center; margin-top: 15px;">Don't have an account yet? register now!</div>
+      </ion-col>
+      <ion-col class="col">
+        <div><button color="secondary" ion-button="" round="" class="disable-hover button button-md button-default button-default-md button-round button-round-md button-md-secondary" (click)="goRegister()" full><span class="button-inner">Register</span></button></div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
